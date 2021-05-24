@@ -1,0 +1,56 @@
+.button {
+    display: block;
+    width: 100%;
+    padding: 16px 12%;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: $font-base-size;
+    cursor: pointer;
+
+    & svg {
+        fill: $white;
+    }
+
+    &.button--mobile-icon {
+        display: flex;
+        justify-content: center;
+        
+        .button-label {
+            display: none;
+        }
+    
+        .mobile-icon {
+            display: flex;
+        }
+    
+        @media screen and (min-width: $tablet) {
+            .button-label {
+                display: block;
+            }
+    
+            .mobile-icon {
+                display: none;
+            }
+        }
+    }
+}
+
+.button--default-one {
+    background-color: $violet;
+    color: $white;
+    
+    &:hover {
+        background-color: $light-violet;
+    }
+}
+
+.button--default-two {
+    background-color: rgba($color: $violet, $alpha: .1);
+    color: $violet;
+
+    &:hover {
+        background-color: rgba($color: $violet, $alpha: .35);
+    }
+}

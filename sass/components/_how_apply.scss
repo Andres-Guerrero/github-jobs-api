@@ -1,0 +1,21 @@
+.how-to-apply {
+    margin-top: 32px;
+    margin-bottom: 168px;
+    padding: 40px 48px 42px;
+    @include violet-container-style;
+    
+    p,
+    a {
+        color: $white;
+    }
+
+    h3 {
+        margin-bottom: 28px;
+        @include h3;
+        color: $white;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,42 @@
+.checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: $font-base-size;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: $very-dark-blue;
+    font-weight: bold;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 24px;
+        width: 24px;
+        border-radius: 3px;
+        background-color: rgba($color: #19202D, $alpha: .10);
+    }
+
+    &:hover input ~ .checkmark {
+        background-color: rgba($color: #5964E0, $alpha: .25);
+    }
+
+    & input:checked ~ .checkmark {
+        background-color:rgba($color: #5964E0, $alpha: 1.0);
+        background-image: url('../assets/desktop/icon-check.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}

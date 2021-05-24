@@ -1,0 +1,36 @@
+.header {
+    background-image: url('../assets/mobile/bg-pattern-header.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: bottom;
+    @media only screen and (min-width: $tablet) {
+        background-image: url('../assets/tablet/bg-pattern-header.svg');
+        
+    }
+    @media only screen and (min-width: $desktop) {
+        background-image: url('../assets/desktop/bg-pattern-header.svg');
+    }
+}
+.header-nav-wrapper {
+    width: 100%;
+    padding: 0 24px;
+    @media only screen and (min-width: $tablet) {
+        padding: 0 40px;
+    }
+    @media only screen and (min-width: $desktop) {
+        max-width: 1110px;
+        margin: 0 auto;
+    }
+}
+
+.header-nav {
+    padding: 32px 0 72px 0;
+    display: flex;
+    justify-content: space-between;
+    @media only screen and (min-width: $tablet) {
+        padding: 42px 0 86px 0;
+    }
+    @media only screen and (min-width: $desktop) {
+        padding: 44px 0 86px 0;
+    }
+}

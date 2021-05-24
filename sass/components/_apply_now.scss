@@ -1,0 +1,31 @@
+.apply-now {
+    padding-top: 23px;
+    padding-bottom: 23px;
+    
+    .company-info {
+        display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .company-info {
+            display: block
+        }
+
+        h2,
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .btn-apply-now {
+        width: 100%;
+
+        @media screen and (min-width: $tablet) {
+            width: 141px;
+        }
+    }
+}

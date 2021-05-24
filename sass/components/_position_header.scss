@@ -1,0 +1,92 @@
+.position-header {
+    position: relative;
+    margin-bottom: 32px;
+    padding-top: 50px;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @include white-container-style;
+    
+    @media screen and (min-width: $tablet) {
+        padding-top: 0;
+        // // padding-right: 42px;
+        padding-bottom: 0;
+        flex-direction: row;
+        // justify-content: space-between;
+        // text-align: left;
+    }
+    
+    .logo {
+        margin-bottom: 24px;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: -25px;
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+        background-color: #FF0000;
+        
+        @media screen and (min-width: $tablet) {
+            // width: 140px;
+            height: 140px;
+            position: static;
+            margin-bottom: 0;
+            flex-basis: 140px;
+            flex-shrink: 0;
+        }
+
+        img {
+            width: 20px;
+            -webkit-filter: #{"brightness(0) invert()"};
+            filter: #{"brightness(0) invert()"};
+
+            @media screen and (min-width: $tablet) {
+                width: 55px;
+            }
+        }
+    }
+
+    .company-info {
+        
+        
+        @media screen and (min-width: $tablet) {
+            // padding: 0 20px 0 40px;
+            margin-right: 20px;
+            margin-left: 40px;
+            // flex-grow: 1;
+            text-align: left;
+        }
+
+        .company {
+            // margin-bottom: 14px;
+            @media screen and (min-width: $desktop) {
+                height: 58px;
+                overflow: hidden;
+            }
+        }
+        .website {
+            margin-bottom: 0;
+            padding-bottom: 26px;
+            
+            @media screen and (min-width: $tablet) {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    .btn-company-site {
+        // flex-grow: 1;
+        min-width: 147px;
+        @media screen and (min-width: $tablet) {
+            // margin-right: 43px;
+            // padding: 0 40px 0 20px;
+            margin-right: 40px;
+            margin-left: auto;
+            flex-shrink: 0;
+        }
+    }
+}

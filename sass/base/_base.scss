@@ -1,0 +1,58 @@
+body {
+    background-color: $light-grey;
+    // position: relative;
+}
+
+h2 {
+    @include h2
+}
+
+p {
+    margin-bottom: 24px;
+    color: $dark-grey;
+}
+
+p strong {
+    font-size: 20px;
+    font-weight: bold;
+    color: $very-dark-blue;
+}
+
+ul {
+    margin-bottom: 24px;
+    color: $dark-grey;
+
+    li {
+        margin-bottom: 8px;
+        display: flex;
+    }
+
+    li::before {
+        padding-right: 32px;
+        content: "\2022";
+        color: $violet;
+    }
+
+}
+
+.number-list {
+    
+    li {
+        display: inline-flex;
+    }
+
+    li span {
+        display: inline-block;
+        padding-right: 25px;
+        font-weight: bold;
+        color: $violet;
+    }
+
+    li::before {
+        padding-right: 0;
+        content: "";
+    }
+}
+a {
+    text-decoration: none;
+}

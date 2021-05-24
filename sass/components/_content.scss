@@ -1,0 +1,27 @@
+.content {
+    width: 100%;
+    margin-top: -40px;
+    padding: 0 24px;
+    @media only screen and (min-width: $tablet) {
+        padding: 0 40px;
+    }
+    @media only screen and (min-width: $desktop) {
+        width: 1110px;
+        margin: -40px auto 0 auto;
+    }
+
+    &.content--position {
+        // padding: 40px 24px 32px;
+
+        @media screen and (min-width: $tablet) {
+            // padding: 48px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            width: 47%;
+            margin-right: auto;
+            margin-bottom: 0;
+            margin-left: auto;
+        }
+    }
+}

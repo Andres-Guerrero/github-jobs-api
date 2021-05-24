@@ -1,0 +1,15 @@
+.content-positions {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 24px;
+
+    @media screen and (min-width: $tablet) {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 11px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 30px;
+    }
+}

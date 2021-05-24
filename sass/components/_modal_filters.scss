@@ -1,0 +1,49 @@
+.modal {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $white;
+    border-radius: 6px;
+    opacity: 0;
+    z-index: 10;
+    display: none;
+
+    @-webkit-keyframes modal-in {
+        from { opacity: 0;}
+        to {opacity: 1}
+    }
+    
+    @keyframes modal-in {
+        from { opacity: 0;}
+        to {opacity: 1;}
+    }
+    
+    &.visible {
+        display: block;
+        -webkit-animation-name: modal-in;
+                animation-name: modal-in;
+        -webkit-animation-duration: .5s;
+                animation-duration: .5s;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+    }
+
+    .location {
+        padding: 0 24px;
+        border-bottom: 1px solid rgba($color: $dark-grey, $alpha: .2);
+
+        .search-field {
+            padding: 24px 0;
+        }
+    }
+
+    .fulltime {
+        padding: 24px;
+    }
+
+    .btn-search {
+        padding: 0 24px 24px;
+    }
+}

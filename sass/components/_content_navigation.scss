@@ -1,0 +1,104 @@
+.content-navigation {
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    border-radius: 6px;
+
+    & .search,
+    & .location,
+    & .fulltime,
+    & .filter,
+    & .btn-search {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    & .filter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            padding: 5px;
+            display: flex;
+        }
+    }
+
+    & .search {
+        flex: 4 1 0;
+    }
+
+    & .search svg {
+        display: none;
+    }
+
+    & .filter,
+    & .btn-search {
+        flex: 1 0 0;
+    }
+
+    & .location,
+    & .fulltime {
+        display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+        margin-bottom: 45px;
+
+        & .location,
+        & .fulltime {
+            display: flex;
+        }
+        
+        & .search {
+            flex: 2.5 1 0;
+        }
+
+        & .search svg {
+            display: flex;
+        }
+
+        & .location {
+            flex: 2 1 0;
+        }
+        & .fulltime {
+            flex: 1 1 1;
+        }
+        & .btn-search {
+            flex: 1 1 0;
+        }
+
+        & .filter {
+            display: none;
+        }
+
+        & .search,
+        & .location {
+            border-right: 1px solid rgba($color: $dark-grey, $alpha: .2);
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 80px;
+    }
+
+}
+
+.bottom-nav {
+    margin-top: 32px;
+    margin-bottom: 62px;
+    
+    @media screen and (min-width: $tablet) {
+        margin-top: 56px;
+    }
+    
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 104px;
+    }
+
+    .btn-load-more {
+        width: 141px;
+        margin:  0 auto;
+    }
+}
