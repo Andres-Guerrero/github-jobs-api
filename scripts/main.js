@@ -6,6 +6,8 @@ const positionsGrid = document.querySelector('.content-positions');
 const loadMoreBtn = document.querySelector('.load-more');
 const searchBtn = document.getElementById('search-btn');
 const navBottom = document.querySelector('.nav-bottom');
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
 // Search Form Desktop
 const searchFormDesk = document.getElementById('search-form-desktop');
 const searchFieldDesk = document.getElementById('search-field-desk');
@@ -30,6 +32,12 @@ if (overlay) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+	if (localStorage.getItem('theme') === null) {
+		localStorage.setItem('theme', null);
+	} else if (localStorage.getItem('theme') === 'dark') {
+		body.classList.add(localStorage.getItem('theme'));
+		themeToggle.checked = true;
+	}
 	loadPositions.getPositions();
 });
 
@@ -75,5 +83,17 @@ if (navBottom) {
 }
 
 function loadMoreOn() {
-	loadMoreBtn.classList.toggle('load-on');
+	if (loadMoreBtn) {
+		loadMoreBtn.classList.toggle('load-on');
+	}
 }
+
+themeToggle.addEventListener('click', () => {
+	if (body.classList.contains('dark')) {
+		localStorage.setItem('theme', null);
+		body.classList.remove('dark');
+	} else {
+		localStorage.setItem('theme', 'dark');
+		body.classList.add(localStorage.getItem('theme'));
+	}
+});

@@ -25,10 +25,9 @@
         position: absolute;
         top: -25px;
         display: flex;
-        
         justify-content: center;
         align-items: center;
-        background-color: #FF0000;
+        border-radius: 6px;
         
         @media screen and (min-width: $tablet) {
             // width: 140px;
@@ -37,6 +36,10 @@
             margin-bottom: 0;
             flex-basis: 140px;
             flex-shrink: 0;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 6px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
         }
 
         img {

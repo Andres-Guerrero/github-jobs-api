@@ -10,35 +10,42 @@
         outline: none;
         font-family: $font-family;
         font-size: $font-base-size;
+        color: var(--input-txt-color);
+        background-color: var(--input-fields);
     }
 
     input::-webkit-input-placeholder {
         font-family: $font-family;
-        color: $very-dark-blue;
+        // color: $very-dark-blue;
+        color: var(--input-txt-color);
         opacity: .5;
     }
 
     input::-moz-placeholder {
         font-family: $font-family;
-        color: $very-dark-blue;
+        // color: $very-dark-blue;
+        color: var(--input-txt-color);
         opacity: .5;
     }
 
     input:-ms-input-placeholder {
         font-family: $font-family;
-        color: $very-dark-blue;
+        // color: $very-dark-blue;
+        color: var(--input-txt-color);
         opacity: .5;
     }
 
     input::-ms-input-placeholder {
         font-family: $font-family;
-        color: $very-dark-blue;
+        // color: $very-dark-blue;
+        color: var(--input-txt-color);
         opacity: .5;
     }
 
     input::placeholder {
         font-family: $font-family;
-        color: $very-dark-blue;
+        // color: $very-dark-blue;
+        color: var(--input-txt-color);
         opacity: .5;
     }
 }

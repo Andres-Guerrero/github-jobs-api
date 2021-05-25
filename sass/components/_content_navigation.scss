@@ -2,7 +2,8 @@
     margin-bottom: 32px;
     display: flex;
     align-items: center;
-    background-color: $white;
+    // background-color: $white;
+    background-color: var(--search-background);
     border-radius: 6px;
 
     & .search,

@@ -18,7 +18,8 @@
     font-size: 24px;
     line-height: 29px;
     font-weight: bold;
-    color: $very-dark-blue;
+    color: var(--h2-color);
+    // color: $very-dark-blue;
 }
 
 @mixin h3 {
@@ -35,7 +36,8 @@
 
 @mixin white-container-style {
     border-radius: $border-radius;
-    background-color: $white;
+    // background-color: $white;
+    background-color: var(--cards);
 }
 
 @mixin violet-container-style {

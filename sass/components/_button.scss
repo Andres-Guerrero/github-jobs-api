@@ -47,10 +47,12 @@
 }
 
 .button--default-two {
-    background-color: rgba($color: $violet, $alpha: .1);
-    color: $violet;
+    // background-color: rgba($color: $violet, $alpha: .1);
+    background-color: rgba($color: var(--btn-two-bg), $alpha: .1);
+    color: var(--btn-two-bg);
 
     &:hover {
-        background-color: rgba($color: $violet, $alpha: .35);
+        // background-color: rgba($color: $violet, $alpha: .35);
+        background-color: rgba($color: var(--btn-two-bg), $alpha: .35);
     }
 }

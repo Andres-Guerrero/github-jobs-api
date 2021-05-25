@@ -119,23 +119,25 @@ class LoadPositions {
 	iteratePositions(positions) {
 		positions.forEach((position) => {
 			this.colorPosition = this.positionColor();
-			positionsGrid.innerHTML += `
-                <div class="position">
-                    <div class="position-logo" style="background-color: ${this.colorPosition}">
-                        <img src="${position.company_logo}" width="50%" />
+			if (positionsGrid) {
+				positionsGrid.innerHTML += `
+                    <div class="position">
+                        <div class="position-logo" style="background-color: ${this.colorPosition}">
+                            <img src="${position.company_logo}" width="50%" />
+                        </div>
+                        <div class="position-time-type">
+                            <span class="time">${this.positionDate(position.created_at)}</span>
+                            •
+                            <span class="type">${position.type}</span>
+                        </div>
+                        <!-- <h3 class="position-title"><a href="${position.url}">${position.title}</a></h3> -->
+                        <h3 class="position-title"><a href="position-detail.html?position-id=${position.id}&page=${this
+					.page}&color=${this.colorPosition}">${position.title}</a></h3>
+                        <p class="position-company">${position.company}</p>
+                        <p class="position-location">${position.location}</p>
                     </div>
-                    <div class="position-time-type">
-                        <span class="time">${this.positionDate(position.created_at)}</span>
-                        •
-                        <span class="type">${position.type}</span>
-                    </div>
-                    <!-- <h3 class="position-title"><a href="${position.url}">${position.title}</a></h3> -->
-                    <h3 class="position-title"><a href="position-detail.html?position-id=${position.id}&page=${this
-				.page}&color=${this.colorPosition}">${position.title}</a></h3>
-                    <p class="position-company">${position.company}</p>
-                    <p class="position-location">${position.location}</p>
-                </div>
-            `;
+                `;
+			}
 		});
 	}
 	positionDate(date) {
@@ -181,11 +183,9 @@ class LoadPositions {
 	}
 	cleanCompanyURL(url) {
 		if (url !== undefined) {
-			// return new URL(url).hostname;
-			return 'Meee';
+			return new URL(url).hostname;
 		} else {
 			return '';
 		}
-		return clean_url;
 	}
 }

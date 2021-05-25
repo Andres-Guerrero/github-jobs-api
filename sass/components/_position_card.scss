@@ -20,7 +20,6 @@
         justify-content: center;
         align-items: center;
         border-radius: 15px;
-        background-color: salmon;
 
         img {
             -webkit-filter: #{"brightness(0) invert()"};
@@ -44,10 +43,11 @@
 
     &-title {
         @include h3;
-        
+        color: var(--h3-color);
 
         a {
-            color: $very-dark-blue;
+            // color: $very-dark-blue;
+            color: var(--h3-color);
 
             &:hover {
                 color: $dark-grey;

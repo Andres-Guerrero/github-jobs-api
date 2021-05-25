@@ -75,8 +75,21 @@ h1 {
   line-height: 34px;
 }
 
+:root {
+  --background: #F4F6F8;
+  --cards: #FFFFFF;
+  --h2-color: #19202D;
+  --h3-color: #19202D;
+  --search-background: #FFFFFF;
+  --input-fields: #FFFFFF;
+  --input-txt-color: #19202D;
+  --btn-two-bg: #5964E0;
+  --p-strong: #19202D;
+  --border-top: #939BF4;
+}
+
 body {
-  background-color: #F4F6F8;
+  background-color: var(--background);
 }
 
 h2 {
@@ -84,18 +97,21 @@ h2 {
   font-size: 24px;
   line-height: 29px;
   font-weight: bold;
-  color: #19202D;
+  color: var(--h2-color);
 }
 
 p {
   margin-bottom: 24px;
   color: #6E8098;
 }
-
 p strong {
   font-size: 20px;
   font-weight: bold;
-  color: #19202D;
+  color: var(--p-strong);
+}
+p a {
+  color: #6E8098;
+  text-decoration: underline;
 }
 
 ul {
@@ -128,6 +144,19 @@ ul li::before {
 
 a {
   text-decoration: none;
+}
+
+.dark {
+  --background: #121721;
+  --search-background: #121721;
+  --cards: #121721;
+  --h2-color: #FFFFFF;
+  --h3-color: #FFFFFF;
+  --input-fields: #121721;
+  --input-txt-color: #FFFFFF;
+  --btn-two-bg: #FFFFFF;
+  --p-strong: #FFFFFF;
+  --border-top: #6E8098;
 }
 
 .header {
@@ -208,7 +237,7 @@ a {
   margin-bottom: 32px;
   display: flex;
   align-items: center;
-  background-color: #FFFFFF;
+  background-color: var(--search-background);
   border-radius: 6px;
 }
 .content-navigation .search, .content-navigation .location, .content-navigation .fulltime, .content-navigation .filter, .content-navigation .btn-search {
@@ -302,30 +331,32 @@ a {
   outline: none;
   font-family: "Kumbh Sans", sans-serif;
   font-size: 1em;
+  color: var(--input-txt-color);
+  background-color: var(--input-fields);
 }
 .search-field input::-webkit-input-placeholder {
   font-family: "Kumbh Sans", sans-serif;
-  color: #19202D;
+  color: var(--input-txt-color);
   opacity: 0.5;
 }
 .search-field input::-moz-placeholder {
   font-family: "Kumbh Sans", sans-serif;
-  color: #19202D;
+  color: var(--input-txt-color);
   opacity: 0.5;
 }
 .search-field input:-ms-input-placeholder {
   font-family: "Kumbh Sans", sans-serif;
-  color: #19202D;
+  color: var(--input-txt-color);
   opacity: 0.5;
 }
 .search-field input::-ms-input-placeholder {
   font-family: "Kumbh Sans", sans-serif;
-  color: #19202D;
+  color: var(--input-txt-color);
   opacity: 0.5;
 }
 .search-field input::placeholder {
   font-family: "Kumbh Sans", sans-serif;
-  color: #19202D;
+  color: var(--input-txt-color);
   opacity: 0.5;
 }
 
@@ -410,11 +441,11 @@ a {
 }
 
 .button--default-two {
-  background-color: rgba(89, 100, 224, 0.1);
-  color: #5964E0;
+  background-color: rgba(var(--btn-two-bg), 0.1);
+  color: var(--btn-two-bg);
 }
 .button--default-two:hover {
-  background-color: rgba(89, 100, 224, 0.35);
+  background-color: rgba(var(--btn-two-bg), 0.35);
 }
 
 .overlay {
@@ -535,7 +566,7 @@ a {
   display: flex;
   flex-direction: column;
   border-radius: 6px;
-  background-color: #FFFFFF;
+  background-color: var(--cards);
 }
 @media screen and (min-width: 768px) and (max-width: 1339px) {
   .position {
@@ -552,7 +583,6 @@ a {
   justify-content: center;
   align-items: center;
   border-radius: 15px;
-  background-color: salmon;
 }
 .position-logo img {
   -webkit-filter: brightness(0) invert();
@@ -572,9 +602,10 @@ a {
   line-height: 24px;
   font-weight: bold;
   color: #19202D;
+  color: var(--h3-color);
 }
 .position-title a {
-  color: #19202D;
+  color: var(--h3-color);
 }
 .position-title a:hover {
   color: #6E8098;
@@ -597,7 +628,7 @@ a {
   align-items: center;
   text-align: center;
   border-radius: 6px;
-  background-color: #FFFFFF;
+  background-color: var(--cards);
 }
 @media screen and (min-width: 768px) {
   .position-header {
@@ -615,7 +646,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #FF0000;
+  border-radius: 6px;
 }
 @media screen and (min-width: 768px) {
   .position-header .logo {
@@ -624,6 +655,10 @@ a {
     margin-bottom: 0;
     flex-basis: 140px;
     flex-shrink: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 6px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
 .position-header .logo img {
@@ -672,7 +707,7 @@ a {
 .position-details {
   padding: 40px 24px 32px;
   border-radius: 6px;
-  background-color: #FFFFFF;
+  background-color: var(--cards);
 }
 @media screen and (min-width: 768px) {
   .position-details {
@@ -734,6 +769,7 @@ a {
 }
 .how-to-apply a {
   text-decoration: underline;
+  word-break: break-all;
 }
 
 .apply-now {
@@ -771,8 +807,8 @@ a {
   height: 114px;
   position: fixed;
   bottom: -115px;
-  background-color: #FFFFFF;
-  border-top: 1px solid #DDDDDD;
+  background-color: var(--background);
+  border-top: 1px solid var(--border-top);
   z-index: 20;
   transition: bottom 0.5s;
 }

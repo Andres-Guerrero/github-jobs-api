@@ -1,5 +1,18 @@
+:root {
+    --background: #{$light-grey};
+    --cards: #{$white};
+    --h2-color: #{$very-dark-blue};
+    --h3-color: #{$very-dark-blue};
+    --search-background: #{$white};
+    --input-fields: #{$white};
+    --input-txt-color: #{$very-dark-blue};
+    --btn-two-bg: #{$violet};
+    --p-strong: #{$very-dark-blue};
+    --border-top: #{$light-violet};
+}
+
 body {
-    background-color: $light-grey;
+    background-color: var(--background);
     // position: relative;
 }
 
@@ -10,13 +23,19 @@ h2 {
 p {
     margin-bottom: 24px;
     color: $dark-grey;
+    
+    strong {
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--p-strong);
+    }
+
+    a {
+        color: $dark-grey;
+        text-decoration: underline;
+    }
 }
 
-p strong {
-    font-size: 20px;
-    font-weight: bold;
-    color: $very-dark-blue;
-}
 
 ul {
     margin-bottom: 24px;
@@ -56,3 +75,31 @@ ul {
 a {
     text-decoration: none;
 }
+
+.dark {
+    --background: #{$midnight};
+    --search-background: #{$midnight};
+    --cards: #{$midnight};
+    --h2-color: #{$white};
+    --h3-color: #{$white};
+    --input-fields: #{$midnight};
+    --input-txt-color: #{$white};
+    --btn-two-bg: #{$white};
+    --p-strong: #{$white};
+    --border-top: #{$dark-grey};
+}
+
+// @media (prefers-color-scheme: dark) {
+//     :root {
+//         --background: #{$midnight};
+//         --search-background: #{$midnight};
+//         --cards: #{$midnight};
+//         --h2-color: #{$white};
+//         --h3-color: #{$white};
+//         --input-fields: #{$midnight};
+//         --input-txt-color: #{$white};
+//         --btn-two-bg: #{$white};
+//         --p-strong: #{$white};
+//         --border-top: #{$dark-grey};
+//     }
+// }
