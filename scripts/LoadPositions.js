@@ -10,7 +10,8 @@ class LoadPositions {
 		this.colorPosition = '#EEEEEE';
 	}
 	getPositions() {
-		fetch(`${this.cors}${this.github_url}`)
+		//fetch(`${this.cors}${this.github_url}`)
+		fetch(positions.json)
 			.then((req) => {
 				return req.json();
 			})
