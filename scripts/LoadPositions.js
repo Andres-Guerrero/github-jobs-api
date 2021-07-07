@@ -11,7 +11,7 @@ class LoadPositions {
 	}
 	getPositions() {
 		//fetch(`${this.cors}${this.github_url}`)
-		fetch(positions.json)
+		fetch('positions.json')
 			.then((req) => {
 				return req.json();
 			})
